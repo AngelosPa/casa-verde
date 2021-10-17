@@ -11,8 +11,8 @@ const Footer = () => {
     <footer
       style={{
         textAlign: 'center',
-        position: 'absolute',
-        bottom: '30px',
+        position: 'relative',
+        bottom: '20px',
         left: '50vw',
         transform: 'translateX(-50%)',
       }}

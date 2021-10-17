@@ -1,6 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NavPath from '../nav-path.json';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  height: 3.75 rem;
+`;
+const Right = styled.div``;
+const Center = styled.div``;
+const Left = styled.div``;
 
 const Nav = () => {
   const stylingObject = {
@@ -41,44 +49,7 @@ const Nav = () => {
           <h1 class="logo" style={{ textAlign: 'center' }}>
             Casa Verde
           </h1>
-          <ul style={stylingObject.ul}>
-            {navPath}
-            {/* <li style={stylingObject.li}>
-                <Link style={stylingObject.a} to={'/'}>
-                  Home
-                </Link>
-              </li>
-              <li style={stylingObject.li}>
-                <Link style={stylingObject.a} to={'/shop'}>
-                  Shop
-                </Link>
-              </li>
-              <li style={stylingObject.li}>
-                <Link style={stylingObject.a} to={'/services'}>
-                  Decoration Services
-                </Link>
-              </li>
-              <li style={stylingObject.li}>
-                <Link style={stylingObject.a} to={'/events'}>
-                  Events
-                </Link>
-              </li>
-              <li style={stylingObject.li}>
-                <Link style={stylingObject.a} to={'/rent'}>
-                  Rental Services
-                </Link>
-              </li>
-              <li style={stylingObject.li}>
-                <Link style={stylingObject.a} to={'/ballet-pilates'}>
-                  Ballet & Pilates
-                </Link>
-              </li>
-              <li style={stylingObject.li}>
-                <Link style={stylingObject.a} to={'/technic'}>
-                  Technical Consulting
-                </Link>
-              </li> */}
-          </ul>
+          <ul style={stylingObject.ul}>{navPath}</ul>
         </nav>
       </div>
     </header>

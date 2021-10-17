@@ -1,37 +1,62 @@
 [
-    {
-      "id": 0,
-      "name": "Home",
-      "path": "/"
-    },
-    {
-      "id": 1,
-      "name": "Shop",
-      "path": "/shop"
-    },
-    {
-      "id": 2,
-      "name": "Decoration Services",
-      "path": "/services"
-    },
-    {
-      "id": 3,
-      "name": "Events",
-      "path": "/events"
-    },
-    {
-        "id": 4,
-        "name": "Rental Services",
-        "path": "/rent"
-      },
-      {
-        "id": 0,
-        "name": "Ballet/Pilates",
-        "path": "/ballet-pilates"
-      },
-      {
-        "id": 0,
-        "name": "Technical Services",
-        "path": "/technic"
-      }
-  ]
+  {
+    "id": 0,
+    "position": "right",
+    "name": "logo",
+    "url": "/"
+  },
+  {
+    "id": 0,
+    "position": "Center",
+    "name": "Home",
+    "path": "/"
+  },
+  {
+    "id": 1,
+    "position": "Center",
+    "name": "Shop",
+    "path": "/shop"
+  },
+  {
+    "id": 2,
+    "position": "Center",
+    "name": "Decoration Services",
+    "path": "/services"
+  },
+  {
+    "id": 3,
+    "position": "Center",
+    "name": "Events",
+    "path": "/events"
+  },
+  {
+    "id": 4,
+    "position": "Center",
+    "name": "Rental Services",
+    "path": "/rent"
+  },
+  {
+    "id": 0,
+    "position": "Center",
+    "name": "Ballet/Pilates",
+    "path": "/ballet-pilates"
+  },
+  {
+    "id": 0,
+    "position": "Center",
+    "name": "Technical Services",
+    "path": "/technic"
+  },
+  {
+    "id": 0,
+    "position": "left",
+    "name": "sign in",
+    "path": "/login"
+  },
+  {
+    "id": 0,
+    "position": "left",
+    "name": "sign up",
+    "path": "/register"
+  }
+]
