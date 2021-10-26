@@ -7,6 +7,7 @@ const ContactForm = () => {
       <div className="form-container">
         {/* <form action="https://formspree.io/f/{form_id}" method="post"> */}
         <form>
+          <h4>Kontaktieren Sie uns für mehr Informationen</h4>
           <label>
             <h5>Name</h5>
             <input type="text" name="name" />

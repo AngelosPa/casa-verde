@@ -15,5 +15,8 @@
   // Google Map
   .map-contaier {
     border: 2px green dashed; // <------------------ remove
+    iframe {
+      border: none;
+    }
   }
 }
