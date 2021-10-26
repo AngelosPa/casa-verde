@@ -1,0 +1,19 @@
+.wrapper-contact {
+  border: 2px red dashed; // <------------------ remove
+  @include flex;
+  flex-direction: column;
+
+  // Contact Form
+  .form-container {
+    border: 2px blue dashed; // <------------------ remove
+    form {
+      @include flex;
+      flex-direction: column;
+    }
+  }
+
+  // Google Map
+  .map-contaier {
+    border: 2px green dashed; // <------------------ remove
+  }
+}

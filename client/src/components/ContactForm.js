@@ -2,23 +2,23 @@ import React from "react";
 
 const ContactForm = () => {
   return (
-    <div className="wrapper-form">
+    <div className="wrapper-contact">
       {/* Form */}
       <div className="form-container">
         {/* <form action="https://formspree.io/f/{form_id}" method="post"> */}
         <form>
           <label>
-            Name
+            <h5>Name</h5>
             <input type="text" name="name" />
           </label>
 
           <label>
-            E-Mail
+            <h5>E-Mail </h5>
             <input type="email" name="email" />
           </label>
 
           <label>
-            Tel
+            <h5>Tel</h5>
             <input type="tel" name="phone" />
           </label>
 
