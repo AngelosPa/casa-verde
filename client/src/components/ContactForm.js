@@ -23,6 +23,11 @@ const ContactForm = () => {
             <input type="tel" name="phone" />
           </label>
 
+          <label>
+            <h5>Nachricht</h5>
+            <textarea name="message"></textarea>
+          </label>
+
           <input type="submit" value="Send" />
         </form>
       </div>

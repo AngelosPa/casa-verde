@@ -6,15 +6,46 @@
   // Contact Form
   .form-container {
     border: 2px blue dashed; // <------------------ remove
+    width: 90vw;
     form {
       @include flex;
       flex-direction: column;
+
+      label {
+        width: 100%;
+        position: relative;
+        @include flex;
+        padding-bottom: 20px;
+
+        h5 {
+          position: absolute;
+          top: -7px;
+          left: 10%;
+          background-color: white;
+        }
+
+        input {
+          width: 90%;
+        }
+
+        textarea {
+          width: 90%;
+          height: 250px;
+        }
+      }
+    }
+
+    textarea {
+      resize: none;
     }
   }
 
   // Google Map
   .map-contaier {
     border: 2px green dashed; // <------------------ remove
+    @include flex;
+    width: 90vw;
+
     iframe {
       border: none;
     }
