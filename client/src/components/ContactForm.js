@@ -5,7 +5,7 @@ const ContactForm = () => {
     <div className="wrapper-contact">
       {/* Form */}
       <div className="form-container">
-        {/* <form action="https://formspree.io/f/{form_id}" method="post"> */}
+        <div className="blur"></div>
         <form>
           <h4>Kontaktieren Sie uns für mehr Informationen</h4>
           <label>
@@ -28,7 +28,7 @@ const ContactForm = () => {
             <textarea name="message"></textarea>
           </label>
 
-          <input type="submit" value="Send" />
+          <input className="form-btn" type="submit" value="Send" />
         </form>
       </div>
 

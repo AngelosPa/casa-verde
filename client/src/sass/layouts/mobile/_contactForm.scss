@@ -1,16 +1,28 @@
 .wrapper-contact {
-  border: 2px red dashed; // <------------------ remove
   @include flex;
   flex-direction: column;
+  background-color: lightsteelblue;
 
   // Contact Form
   .form-container {
-    border: 2px blue dashed; // <------------------ remove
     width: 90vw;
+    height: 530px;
+    @include flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+
     form {
       @include flex;
       flex-direction: column;
 
+      position: absolute;
+
+      h4 {
+        padding-bottom: 15px;
+      }
       label {
         width: 100%;
         position: relative;
@@ -21,30 +33,55 @@
           position: absolute;
           top: -7px;
           left: 10%;
+          padding: 0 5px;
           background-color: white;
         }
 
         input {
           width: 90%;
+          height: 30px;
+          border-radius: 7px;
+          border: none;
         }
 
         textarea {
           width: 90%;
           height: 250px;
+          padding-top: 10px;
+          resize: none;
+          border-radius: 7px;
+          border: none;
         }
+      }
+
+      // Submit Button
+      .form-btn {
+        width: 90%;
+        height: 30px;
+        border-radius: 7px;
+        border: none;
+        margin-bottom: 10px;
+        background-color: rgb(74, 159, 255);
+        color: white;
       }
     }
 
-    textarea {
-      resize: none;
+    // Form Background Blur effect
+    .blur {
+      background-color: rgba(255, 255, 255, 0.5);
+      filter: blur(3px);
+      width: 90vw;
+      height: 530px;
+      position: absolute;
+      border-radius: 20px;
     }
   }
 
   // Google Map
   .map-contaier {
-    border: 2px green dashed; // <------------------ remove
     @include flex;
     width: 90vw;
+    margin-bottom: 15px;
 
     iframe {
       border: none;
