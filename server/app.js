@@ -47,32 +47,6 @@ mongoose
     console.log(`There was a problem ${error.message}`);
   });
 
-// Alow uploads
-app.use("/uploads", express.static("uploads"));
-const multer = require("multer");
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "./uploads/");
-  },
-  filename: function (req, file, cb) {
-    cb(null, new Date().toISOString() + file.originalname);
-  },
-});
-const upload = multer({
-  storage: storage,
-  limits: { fileSize: 1024 * 1024 * 10 },
-  fileFilter: function (req, file, cb) {
-    if (
-      file.mimetype == "image/jpeg" ||
-      file.mimetype == "image/png" ||
-      file.mimetype == "image/gif"
-    ) {
-      cb(null, true);
-    } else {
-      cb(new Error("Only .jpg .gif .png files are OK"), false);
-    }
-  },
-});
 
 // Initializing Routes
 var indexRouter = require("./routes/index");
@@ -83,7 +57,7 @@ var ProductRouter = require("./routes/product");
 // use routes
 
 app.use("/", indexRouter);
-app.use("/user", upload.single("avatar"), usersRouter);
+app.use("/user", usersRouter);
 app.use("/admin", adminRouter);
 app.use("/product", ProductRouter);
 

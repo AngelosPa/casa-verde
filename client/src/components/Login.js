@@ -15,6 +15,8 @@ const Login = () => {
       })
       .then((res) => {
         localStorage.setItem("token", res.data.token);
+        localStorage.setItem("basket", res.data.user.basket);
+      
       });
   };
   let history = useHistory();

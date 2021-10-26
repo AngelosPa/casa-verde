@@ -28,7 +28,18 @@ const userSchema = new Schema({
   state: { type: String },
   zip: { type: String },
   country: { type: String },
+  wishlist: [{ type: Schema.Types.ObjectId, ref: "Product" }],
+  //              Tareq's basket
+  // basket: [
+  //   {
+  //     product: { type: Schema.Types.ObjectId, ref: "Product" },
+  //     purchasedQuantity: Number,
+  //   },
+  // ],
   basket: [{ type: Schema.Types.ObjectId, ref: "Product" }],
+  orders: [{ type: Schema.Types.ObjectId, ref: "Order" }],
+  createdAt: { type: Date, default: Date.now },
+  updatedAt: { type: Date, default: Date.now },
 });
 const productSchema = Schema({
   user: { type: Schema.Types.ObjectId, ref: "User" },
