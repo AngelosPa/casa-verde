@@ -54,15 +54,18 @@ allControllers.login = async (req, res) => {
     if (await bcrypt.compare(password, user.password)) {
       const token = createToken(user);
       req.session.user = user;
-      await res.json({
-        auth: true,
-        token,
-        user: {
-          password: user.password,
-          username: user.username,
-          basket: user.basket,
-        },
-      });
+      await res
+        .status(200)
+        .header("auth", token)
+        .json({
+          auth: true,
+          token,
+          user: {
+            password: user.password,
+            username: user.username,
+            basket: user.basket,
+          },
+        });
     } else {
       res.json({
         message: "Not Allowed, please check your username or password",

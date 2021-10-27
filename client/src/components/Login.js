@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { useHistory } from "react-router-dom";
 
-const Login = () => {
+const Login = ({ history }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   axios.defaults.withCredentials = true;
@@ -16,14 +15,13 @@ const Login = () => {
       .then((res) => {
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("basket", res.data.user.basket);
-      
       });
   };
-  let history = useHistory();
+
   const redirect = () => {
     history.push("/");
   };
-  
+
   return (
     <div className="register-container">
       <input
