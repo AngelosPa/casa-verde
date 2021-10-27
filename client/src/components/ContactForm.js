@@ -7,7 +7,6 @@ const ContactForm = () => {
       <div className="form-container">
         <div className="blur"></div>
         <form>
-          <h4>Kontaktieren Sie uns für mehr Informationen</h4>
           <label>
             <h5>Name</h5>
             <input type="text" name="name" />

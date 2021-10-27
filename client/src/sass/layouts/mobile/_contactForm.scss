@@ -1,12 +1,12 @@
 .wrapper-contact {
   @include flex;
   flex-direction: column;
-  background-color: lightsteelblue;
+  background-color: gray;
 
   // Contact Form
   .form-container {
-    width: 90vw;
-    height: 530px;
+    width: 300px;
+    height: 500px;
     @include flex;
     flex-direction: column;
     position: relative;
@@ -17,12 +17,9 @@
     form {
       @include flex;
       flex-direction: column;
-
+      width: 100%;
       position: absolute;
 
-      h4 {
-        padding-bottom: 15px;
-      }
       label {
         width: 100%;
         position: relative;
@@ -34,7 +31,6 @@
           top: -7px;
           left: 10%;
           padding: 0 5px;
-          background-color: white;
         }
 
         input {
@@ -42,12 +38,15 @@
           height: 30px;
           border-radius: 7px;
           border: none;
+          padding-left: 5px;
+          // outline: transparent;
         }
 
         textarea {
           width: 90%;
           height: 250px;
           padding-top: 10px;
+          padding-left: 5px;
           resize: none;
           border-radius: 7px;
           border: none;
@@ -70,8 +69,8 @@
     .blur {
       background-color: rgba(255, 255, 255, 0.5);
       filter: blur(3px);
-      width: 90vw;
-      height: 530px;
+      width: 300px;
+      height: 500px;
       position: absolute;
       border-radius: 20px;
     }
@@ -85,6 +84,7 @@
 
     iframe {
       border: none;
+      border-radius: 5px;
     }
   }
 }
