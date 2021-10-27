@@ -42,7 +42,9 @@ const Nav = () => {
     <header>
       <nav>
         <div className="nav-top">
-          <div className="logo">img goes here</div>
+        <Link to="/">
+        <div className="logo">img</div>
+        </Link>
           <div>
             {token ? (
               <>
@@ -52,9 +54,13 @@ const Nav = () => {
             ) : (
               <>
                 {" "}
-                <Link to="/login">sign in</Link>
+                <Link to="/login">
+                  <button>sign in</button>
+                </Link>
                 {"  "}
-                <Link to="/register">sign up</Link>
+                <Link to="/register">
+                <button>register</button>
+                </Link>
               </>
             )}
           </div>
