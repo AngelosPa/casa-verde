@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import Contact from "./components/footer/Contact";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import Basket from "./components/Shop/Basket";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
           <Route path="/contact" exact render={Contact}></Route>
           <Route path="/login" exact component={Login}></Route>
           <Route path="/register" exact component={Register}></Route>
+          <Route path="/basket" exact component={Basket}></Route>
         </Switch>
       </main>
       <Footer />
