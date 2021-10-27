@@ -48,18 +48,18 @@ const Nav = () => {
           <div>
             {token ? (
               <>
-                {" "}
-                <button onClick={logOut}>logout</button>
+                <Link to="/basket">
+                  <button>Basket</button>
+                </Link>
+                <button onClick={logOut}>Logout</button>
               </>
             ) : (
               <>
-                {" "}
                 <Link to="/login">
-                  <button>sign in</button>
+                  <button>Sign In</button>
                 </Link>
-                {"  "}
                 <Link to="/register">
-                <button>register</button>
+                <button>Register</button>
                 </Link>
               </>
             )}
