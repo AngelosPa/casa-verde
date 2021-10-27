@@ -3,10 +3,15 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
+import { get } from "mongoose";
+import Shopitem from "./Shopitem";
 
 function Shop() {
   const [data, setData] = useState([]);
 
+  
+
+//show all products
   const getAllProducts = () => {
     const config = {
       headers: {
@@ -19,7 +24,7 @@ function Shop() {
       .then((res) => {
         if (res.data) {
           setData(res.data);
-          console.log(res.data);
+         // console.log(res.data);
         } else {
           setData({ message: "user NOT Authenticated" });
         }
@@ -48,30 +53,16 @@ function Shop() {
   const getProducts = data?.map((obj) => {
     const { _id, category, name, price, description, quantity } = obj;
 
-    return (
-      <div
-        style={{
-          width: "150px",
-          height: "200px",
-          border: "1px solid red",
-          backgroundColor: "yellow",
-          fontSize: "18px",
-        }}
-      >
-        {" "}
-        <ul key={_id}>
-          <li>category: {category}</li>
-          <li>name: {name}</li>
-          <li>price: {price}</li>
-          <li>description: {description}</li>
-          <li>quantity: {quantity}</li>
-        </ul>
-      </div>
-    );
+    return <Shopitem obj ={obj} />
   });
+  console.log(typeof(getBasket));
   return (
     <div>
-      <nav>basket:{getBasket?.length}</nav>
+      <nav>basket: you have {getBasket} in your basket</nav>
+      {/* <p>
+        Total: €
+        {getProducts.reduce((sum, item) => sum + item.price * item.quantity, 0)}
+      </p> */}
       <h1>Hi, I am the Shop Component!!!</h1>
       <div
         style={{
@@ -80,11 +71,12 @@ function Shop() {
           justifyContent: "center",
           flexWrap: "wrap",
         }}
-      >
-        {getProducts}
-      </div>
+        
+      > 
+        {getProducts } 
+      </div> 
     </div>
   );
 }
-
+   
 export default Shop;

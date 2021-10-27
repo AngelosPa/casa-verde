@@ -28,7 +28,7 @@ const userSchema = new Schema({
   state: { type: String },
   zip: { type: String },
   country: { type: String },
-  wishlist: [{ type: Schema.Types.ObjectId, ref: "Product" }],
+  wishlist: [],
   //              Tareq's basket
   // basket: [
   //   {

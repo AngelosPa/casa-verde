@@ -30,7 +30,9 @@ router.get("/checkAuth", middleware.checkToken);
 // it requres req.body.productID  => {
 // "productID": "write the id of ur product"
 // }
+router.post("/wishlist/:id", allProductControllers.addToWishlist).delete("/wishlist/:id", allProductControllers.removeFromWishlist);
 router.post("/:id", allProductControllers.addToBasket).get("/:id", allProductControllers.getOneByID).delete("/:id", allProductControllers.removeFromBasket);
-/* with put to chekout, pay, update the inventory and empty the basket http://localhost:5000/user/checkout/:id where id is the id of the user */
+
+
 router.put("/checkout/:id", allProductControllers.getCheckout);
 module.exports = router;

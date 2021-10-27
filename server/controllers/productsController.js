@@ -40,11 +40,10 @@ allProductControllers.addProduct = async (req, res) => {
 // Add new Product to the basket from users
 //616ec638b7d4def05aa683c5 bs for product id
 //
+//adding controllers
 allProductControllers.addToBasket = async (req, res) => {
   try {
-  
-
-    const user = await User.findById(req.params.id);
+  const user = await User.findById(req.params.id);
     const product = await Product.findById(req.body.productId);
     if (user && product) {
       user.basket.push(product);
@@ -56,6 +55,38 @@ allProductControllers.addToBasket = async (req, res) => {
   } catch (err) {
     res.status(400).json({ message: err.message });
   }
+};
+allProductControllers.addToWishlist = async (req, res) => {
+
+  try {
+    const user = await User.findById(req.params.id);
+      const product = await Product.findById(req.body.productId);
+      if (user && product) {
+        user.wishlist.push(product);
+        user.save();
+        res.status(201).json({ message: "Product added to wishlist ✅" });
+      } else {
+        res.status(404).json({ message: "User or product not found" });
+      }
+    } catch (err) {
+      res.status(400).json({ message: err.message });
+    }
+}
+// remove controllers
+allProductControllers.removeFromWishlist = async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+      const product = await Product.findById(req.body.productId);
+      if (user && product ) {
+        user.wishlist.pull(product);
+        user.save();
+        res.status(201).json({ message: "Product removed from wishlist ✅" });
+      } else {
+        res.status(404).json({ message: "User or product not found" });
+      }
+    } catch (err) {
+      res.status(400).json({ message: err.message });
+    }
 };
 allProductControllers.removeFromBasket = async (req, res) => {
   try {
