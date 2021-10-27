@@ -1,12 +1,29 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+import ServicesData from "../services.json";
+import Map from "./Map";
 
 const Services = () => {
+
+  const servicesMenu = ServicesData.map((obj) => {
+    const { id, name, link } = obj;
+    return (
+      <li key={id}>
+        <Link to={link}>{name}</Link>
+      </li>
+    );
+  });
+
   return (
-    <div>
-      <h3>Weddings</h3>
-      <h3>Private Events</h3>
-      <h3>Funerals</h3>
-      
+    <div className="home">
+      <div className="home-top">
+        <div className="roof"></div>
+        <h1>Casa Verde</h1>
+        <p>Decoration Services</p>
+      </div>
+      <ul>{servicesMenu}</ul>
+      <div>Images- not ready</div>
+     <Map />
     </div>
   );
 }

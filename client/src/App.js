@@ -13,7 +13,6 @@ import Footer from "./components/Footer";
 import Contact from "./components/footer/Contact";
 import Login from "./components/Login";
 import Register from "./components/Register";
-import Logout from "./components/Logout";
 
 function App() {
   return (
@@ -21,12 +20,14 @@ function App() {
       state={{
         width: "100vw",
         height: "100v",
-        display: "flex"
+        display: "flex",
       }}
     >
       <Nav />
-      <main >
-        <p><b>**Mobile page is under construction**</b></p>
+      <main>
+        <p>
+          <b>**Mobile page is under construction**</b>
+        </p>
         <Switch>
           {/* Need to add public.env */}
           <Route path="/" exact render={Home}></Route>
@@ -39,7 +40,6 @@ function App() {
           <Route path="/about" exact render={About}></Route>
           <Route path="/contact" exact render={Contact}></Route>
           <Route path="/login" exact component={Login}></Route>
-          <Route path="/logout" exact component={Logout}></Route>
           <Route path="/register" exact component={Register}></Route>
         </Switch>
       </main>
