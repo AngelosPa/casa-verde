@@ -33,7 +33,7 @@ function Shop() {
         console.log("here", err.message);
       });
   };
-  console.log(data);
+ 
   //localStorage.setItem("data", JSON.stringify(data));s
   const getBasket = localStorage.getItem("basket");
   console.log(getBasket);
@@ -49,7 +49,7 @@ function Shop() {
       </div>
     );
   }
-  console.log(data);
+  
   const getProducts = data?.map((obj) => {
     const { _id, category, name, price, description, quantity } = obj;
 

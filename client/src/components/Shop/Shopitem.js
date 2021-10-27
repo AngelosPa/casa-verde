@@ -7,16 +7,19 @@ function Shopitem(props) {
     const [count, setCount] = useState(0);  
     const [wishlist, setWishlist] = useState(true);
       // add to basket
-
     const addToBasket = (id) => {
         setCount(count + 1);
         axios.post("user/616fecb8c07e23a17f5f1042", {
-          productId: id,})
+          productId: id,
+        })
       .then((res) => {
         console.log(res);
       
       });
       };
+      //user/616fecb8c07e23a17f5f1042 is hard coded 
+//make wishlist have only unique ids
+      //https://stackoverflow.com/questions/50215619/axios-delete-method-not-working-in-react fix the delete operation
  const removeFromBasket = (id) => {
         setCount(count - 1);
         axios
@@ -48,15 +51,12 @@ function Shopitem(props) {
       };
     return (
         <div
-          style={{
-           
-            border: "1px solid red",
+          style={{ border: "1px solid red",
             backgroundColor: "green",
             fontSize: "18px",
           }}
         >
-        
-          <ul key={props.obj._id}>
+      <ul key={props.obj._id}>
             <li>category: {props.obj.category}</li>
             <li>name: {props.obj.name}</li>
             <li>price: {props.obj.price}</li>

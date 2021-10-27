@@ -77,7 +77,7 @@ allProductControllers.removeFromWishlist = async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
       const product = await Product.findById(req.body.productId);
-      if (user && product ) {
+      if (user && product) {
         user.wishlist.pull(product);
         user.save();
         res.status(201).json({ message: "Product removed from wishlist ✅" });
@@ -187,7 +187,7 @@ allProductControllers.getOneByID = async (req, res) => {
       message: `${user.username} has ${user.basket.length} stuff in his basket`,
       basket: user.basket
         .map((item) => ` ${item.name} from ${item.category} `)
-        .join(", "),
+        .join("AND"),
     });
   } catch (err) {
     res.status(err.status).json({ message: err.message });
