@@ -77,7 +77,7 @@ allProductControllers.removeFromBasket = async (req, res) => {
 
 allProductControllers.getCheckout = async (req, res) => {
   //we will get it from front end as obj  once the payment is done
-  const placedOrder = true;
+  //const placedOrder = true;
   try {
     const user = await User.findById(req.params.id);
     
@@ -121,7 +121,7 @@ const updatedProduct = await Product.updateMany(
 //  console.log(product.map((el)=> `${el._id} only ${el.quantity} left`));
 
  // we empty the basket
-    const basketupdater = await User.findByIdAndUpdate(req.params.id, {
+     const basketupdater = await User.findByIdAndUpdate(req.params.id, {
       $set: {
         basket: [],
       },

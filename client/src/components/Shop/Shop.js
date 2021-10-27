@@ -19,8 +19,9 @@ function Shop() {
       .then((res) => {
         if (res.data) {
           setData(res.data);
+          console.log(res.data);
         } else {
-          setData({});
+          setData({ message: "user NOT Authenticated" });
         }
       })
       .catch((err) => {
@@ -29,7 +30,8 @@ function Shop() {
   };
   console.log(data);
   //localStorage.setItem("data", JSON.stringify(data));s
-
+  const getBasket = localStorage.getItem("basket");
+  console.log(getBasket);
   useEffect(() => {
     getAllProducts();
   }, []);
@@ -53,22 +55,23 @@ function Shop() {
           height: "200px",
           border: "1px solid red",
           backgroundColor: "yellow",
-          fontSize: "18px"
+          fontSize: "18px",
         }}
       >
         {" "}
-        <div key={_id}>
+        <ul key={_id}>
           <li>category: {category}</li>
           <li>name: {name}</li>
           <li>price: {price}</li>
           <li>description: {description}</li>
           <li>quantity: {quantity}</li>
-        </div>
+        </ul>
       </div>
     );
   });
   return (
     <div>
+      <nav>basket:{getBasket?.length}</nav>
       <h1>Hi, I am the Shop Component!!!</h1>
       <div
         style={{

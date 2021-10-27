@@ -48,7 +48,6 @@ mongoose
   });
 
 
-
 // Initializing Routes
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/user");

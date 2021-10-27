@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import ServicesData from "../services.json";
+import ContactForm from './ContactForm';
 import Map from "./Map";
 
 const Services = () => {
@@ -23,6 +24,7 @@ const Services = () => {
       </div>
       <ul>{servicesMenu}</ul>
       <div>Images- not ready</div>
+      <ContactForm />
      <Map />
     </div>
   );

@@ -1,10 +1,5 @@
 [
-  {
-    "id": 0,
-    "position": "right",
-    "name": "logo",
-    "path": "/"
-  },
+  
   {
     "id": 1,
     "position": "center",
@@ -41,35 +36,17 @@
     "name": "Technical Services",
     "path": "/technic"
   },
-
-  {
+{
     "id": 7,
-    "position": "left",
-    "name": "sign in",
-    "path": "/login"
-  },
-  {
-    "id": 8,
-    "position": "left",
-    "name": "sign up",
-    "path": "/register"
-  },
-  {
-    "id": 9,
     "position": "left",
     "name": "About",
     "path": "/about"
   },
   {
-    "id": 10,
+    "id": 8,
     "position": "left",
     "name": "Contact",
     "path": "/contact"
-  },
-  {
-    "id": 11,
-    "position": "left",
-    "name": "logout",
-    "path": "/logout"
   }
+
 ]

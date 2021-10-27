@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-const allControllers = require("../controllers/controller");
+
 const allProductControllers = require("../controllers/productsController");
 /* to view Products to http://localhost:5000/product/ */
 router.get("/", allProductControllers.getAllProducts);

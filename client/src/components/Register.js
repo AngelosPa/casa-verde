@@ -7,7 +7,6 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConf, setPasswordConf] = useState("");
-
   axios.defaults.withCredentials = true;
 
   const handleSubmit = () => {
@@ -17,7 +16,6 @@ const Register = () => {
     data.append("passwordConf", passwordConf);
     data.append("email", email);
 
-
     axios
       .post("user/register", data, {
         header: {
@@ -26,7 +24,6 @@ const Register = () => {
       })
       .then((res) => console.log(res.data));
   };
-
   // i used useHistory to redirect after registering to the login page
   let history = useHistory();
   const redirect = () => {
